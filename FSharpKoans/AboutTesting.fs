@@ -4,6 +4,7 @@ namespace FSharpKoans
 // The "open" directive allows you to access a namespace or module without
 // qualifying that access.  So if you wrote "open System", you'd be able to
 // write "Console.WriteLine" instead of "System.Console.WriteLine".
+open System
 // There's more about this in AboutModules.fs, later.
 open NUnit.Framework
 
@@ -36,8 +37,8 @@ module ``01: About Testing`` =
     *)
 
     //[<Test>]
-    //let ``My whitespace is messed up!`` () = (1 + 1) |> should equal __
-        //(2 + 4) |> should equal __
+    //let ``My whitespace is messed up!`` () = (1 + 1) |> should equal _2_
+        //(2 + 4) |> should equal _6_
 
     (*
         If you uncomment that example, you'll see that it won't compile.  That's
@@ -48,9 +49,9 @@ module ``01: About Testing`` =
     [<Test>]
     let ``01 How this works`` () = // In F#, any sequence of characters between `` marks can be identifiers.  ``This is a long method name`` is way better than ThisIsALongMethodName !
         let expected_value = 1 + 1
-        let actual_value = __ //start by changing this line
+        let actual_value = 2 //start by changing this line
         actual_value |> should equal expected_value
    
     // Easy, right? Now try one more.
     [<Test>]
-    let ``02 Fill in the values`` () = (1 + 1) |> should equal __
+    let ``02 Fill in the values`` () = (1 + 1) |> should equal 2
